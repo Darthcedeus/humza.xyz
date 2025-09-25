@@ -48,6 +48,15 @@
     .cta-row{display:flex;gap:12px;margin-top:18px}
     .btn{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:10px 14px;border-radius:10px;color:#ffffff;display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;backdrop-filter:blur(6px)}
     .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent));color:#021018;border:none;box-shadow:0 6px 18px rgba(255,255,255,0.2)}
+
+    /* CVEs section */
+    .cves { margin: 28px 0 0; padding: 18px; background: var(--glass); border-radius: 12px; border:1px solid rgba(255,255,255,0.05); }
+    .cves h2 { font-size: 20px; margin: 0 0 10px 0; color: var(--neon); }
+    .cves ul { list-style: none; padding: 0; margin: 0; display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:10px 18px; }
+    .cves li { font-size: 14px; }
+    .cves a { color: var(--neon); font-weight:600; text-decoration: none; }
+    .cves a:hover { text-decoration: underline; color: var(--muted); }
+
     footer{padding:28px;text-align:center;color:var(--muted);font-size:13px}
     @media (max-width:880px){.hero-inner{flex-direction:column;align-items:flex-start;padding:28px}}
   </style>
@@ -72,11 +81,27 @@
           <div class="cta-row">
             <a class="btn btn-primary" href="https://www.linkedin.com/in/humza-ahmad-382166188" target="_blank" rel="noopener noreferrer">Contact</a>
           </div>
+
+          <!-- Public CVEs Section -->
+          <section class="cves" aria-labelledby="cves-title">
+            <h2 id="cves-title">Public CVEs</h2>
+            <ul>
+              <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-29757" target="_blank" rel="noopener">CVE-2025-29757</a></li>
+              <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-36756" target="_blank" rel="noopener">CVE-2025-36756</a></li>
+              <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-36757" target="_blank" rel="noopener">CVE-2025-36757</a></li>
+              <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-36758" target="_blank" rel="noopener">CVE-2025-36758</a></li>
+              <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-36759" target="_blank" rel="noopener">CVE-2025-36759</a></li>
+              <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45969" target="_blank" rel="noopener">CVE-2024-45969</a></li>
+              <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45970" target="_blank" rel="noopener">CVE-2024-45970</a></li>
+              <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45971" target="_blank" rel="noopener">CVE-2024-45971</a></li>
+              <li><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-34057" target="_blank" rel="noopener">CVE-2024-34057</a></li>
+            </ul>
+          </section>
         </div>
       </div>
     </main>
     <footer>
-      © <span id="year"></span> Humza Ahmad ⚡ — 
+      © <span id="year"></span> Humza Ahmad ⚡ — Designed with a hacker vibe.
     </footer>
   </div>
   <script>
