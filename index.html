@@ -50,15 +50,53 @@
     .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent));color:#021018;border:none;box-shadow:0 6px 18px rgba(255,255,255,0.2)}
 
     /* CVEs section */
-    .cves { margin: 28px 0 0; padding: 18px; background: var(--glass); border-radius: 12px; border:1px solid rgba(255,255,255,0.05); }
-    .cves h2 { font-size: 20px; margin: 0 0 10px 0; color: var(--neon); }
-    .cves ul { list-style: none; padding: 0; margin: 0; display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:10px 18px; }
-    .cves li { font-size: 14px; }
-    .cves a { color: var(--neon); font-weight:600; text-decoration: none; }
-    .cves a:hover { text-decoration: underline; color: var(--muted); }
+    .cves { 
+      margin: 28px 0 0; 
+      padding: 18px; 
+      background: var(--glass); 
+      border-radius: 12px; 
+      border:1px solid rgba(255,255,255,0.05); 
+    }
+    .cves h2 { 
+      font-size: 20px; 
+      margin: 0 0 14px 0; 
+      color: var(--neon); 
+    }
+    .cves ul { 
+      list-style: none; 
+      padding: 0; 
+      margin: 0; 
+      display:grid; 
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); 
+      gap:12px 18px; 
+    }
+    .cves li { 
+      font-size: 14px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 10px;
+      padding: 10px 12px;
+      border: 1px solid rgba(148,163,184,0.18);
+      transition: all 0.16s ease-out;
+    }
+    .cves li:hover {
+      border-color: var(--accent);
+      background: rgba(255,255,255,0.04);
+      transform: translateY(-2px);
+    }
+    .cves a { 
+      color: var(--neon); 
+      font-weight:600; 
+      text-decoration: none; 
+    }
+    .cves a:hover { 
+      text-decoration: underline; 
+      color: var(--muted); 
+    }
 
     footer{padding:28px;text-align:center;color:var(--muted);font-size:13px}
-    @media (max-width:880px){.hero-inner{flex-direction:column;align-items:flex-start;padding:28px}}
+    @media (max-width:880px){
+      .hero-inner{flex-direction:column;align-items:flex-start;padding:28px}
+    }
   </style>
 </head>
 <body>
@@ -78,65 +116,64 @@
           <div class="summary">
             Cybersecurity specialist with expertise in penetration testing and security audits of OT systems. Skilled in component testing of smart meters, RTUs, IEDs, EV chargers, and solar inverters. Proficient in protocol testing & fuzzing (DLMS, MBus, IEC 104, IEC 61850 MMS, Goose, OCPP), web application & API testing, and reverse engineering & source code review.
           </div>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="https://www.linkedin.com/in/humza-ahmad-382166188" target="_blank" rel="noopener noreferrer">Contact</a>
-          </div>
 
           <!-- Public CVEs Section -->
           <section class="cves" aria-labelledby="cves-title">
             <h2 id="cves-title">Public CVEs</h2>
-    <ul>
-  <!-- 2024 -->
-  <li>
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-34057" target="_blank" rel="noopener">CVE-2024-34057</a>
-    – Buffer overflow DoS in Triangle Microworks TMW IEC 61850 client libraries
-  </li>
-  <li>
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45969" target="_blank" rel="noopener">CVE-2024-45969</a>
-    – NULL pointer dereference DoS in MMS client (MZ Automation IEC library)
-  </li>
-  <li>
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45970" target="_blank" rel="noopener">CVE-2024-45970</a>
-    – Stack buffer overflow via MMS FileDirResponse in LibIEC61850 MMS client
-  </li>
-  <li>
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45971" target="_blank" rel="noopener">CVE-2024-45971</a>
-    – Stack buffer overflow via MMS IdentifyResponse in LibIEC61850 MMS client
-  </li>
+            <ul>
+              <!-- 2024 -->
+              <li>
+                <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-34057" target="_blank" rel="noopener">CVE-2024-34057</a>
+                – Buffer overflow DoS in Triangle Microworks TMW IEC 61850 client libraries
+              </li>
+              <li>
+                <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45969" target="_blank" rel="noopener">CVE-2024-45969</a>
+                – NULL pointer dereference DoS in MMS client (MZ Automation IEC library)
+              </li>
+              <li>
+                <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45970" target="_blank" rel="noopener">CVE-2024-45970</a>
+                – Stack buffer overflow via MMS FileDirResponse in LibIEC61850 MMS client
+              </li>
+              <li>
+                <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-45971" target="_blank" rel="noopener">CVE-2024-45971</a>
+                – Stack buffer overflow via MMS IdentifyResponse in LibIEC61850 MMS client
+              </li>
 
-  <!-- 2025 -->
-  <li>
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-29757" target="_blank" rel="noopener">CVE-2025-29757</a>
-    – Incorrect authorization in Growatt cloud ‘plant transfer’ enabling plant takeover
-  </li>
-  <li>
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-36756" target="_blank" rel="noopener">CVE-2025-36756</a>
-    – Missing authorization in SolaX Cloud allowing inverter takeover by serial number
-  </li>
-  <li>
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-36757" target="_blank" rel="noopener">CVE-2025-36757</a>
-    – Admin login bypass on SolaX Cloud via parameter tampering
-  </li>
-  <li>
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-36758" target="_blank" rel="noopener">CVE-2025-36758</a>
-    – Auth clipping / rate-limit bypass in SolaX Cloud using Forgot Password as oracle
-  </li>
-  <li>
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-36759" target="_blank" rel="noopener">CVE-2025-36759</a>
-    – User enumeration in SolaX Cloud leaking emails and phone numbers
-  </li>
-  <li>
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-40591" target="_blank" rel="noopener">CVE-2025-40591</a>
-    – Command injection in web Log Viewer tool allowing root ‘tail’ on filesystem
-  </li>
-  <li>
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-40890" target="_blank" rel="noopener">CVE-2025-40890</a>
-    – Stored XSS in Dashboards feature of Nozomi Guardian/CMC (authenticated user dashboards)
-  </li>
-</ul>
-
-
+              <!-- 2025 -->
+              <li>
+                <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-29757" target="_blank" rel="noopener">CVE-2025-29757</a>
+                – Incorrect authorization in Growatt cloud ‘plant transfer’ enabling plant takeover
+              </li>
+              <li>
+                <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-36756" target="_blank" rel="noopener">CVE-2025-36756</a>
+                – Missing authorization in SolaX Cloud allowing inverter takeover by serial number
+              </li>
+              <li>
+                <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-36757" target="_blank" rel="noopener">CVE-2025-36757</a>
+                – Admin login bypass on SolaX Cloud via parameter tampering
+              </li>
+              <li>
+                <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-36758" target="_blank" rel="noopener">CVE-2025-36758</a>
+                – Auth clipping / rate-limit bypass in SolaX Cloud using Forgot Password as oracle
+              </li>
+              <li>
+                <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-36759" target="_blank" rel="noopener">CVE-2025-36759</a>
+                – User enumeration in SolaX Cloud leaking emails and phone numbers
+              </li>
+              <li>
+                <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-40591" target="_blank" rel="noopener">CVE-2025-40591</a>
+                – Command injection in web Log Viewer tool allowing root ‘tail’ on filesystem
+              </li>
+              <li>
+                <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-40890" target="_blank" rel="noopener">CVE-2025-40890</a>
+                – Stored XSS in Dashboards feature of Nozomi Guardian/CMC (authenticated user dashboards)
+              </li>
+            </ul>
           </section>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://www.linkedin.com/in/humza-ahmad-382166188" target="_blank" rel="noopener noreferrer">Contact</a>
+          </div>
         </div>
       </div>
     </main>
