@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Humza Ahmad — Cybersecurity · OT Penetration Testing</title>
-  <meta name="description" content="Humza Ahmad — Cybersecurity specialist focusing on OT penetration testing, smart grid component testing, and advanced protocol fuzzing." />
+  <title>Humza Ahmad — OT Security Researcher</title>
+  <meta name="description" content="Humza Ahmad is an OT security researcher and penetration tester focused on critical infrastructure, smart grids, and industrial protocols." />
   <meta name="author" content="Humza Ahmad" />
+  <meta name="theme-color" content="#07101a" />
   <style>
     :root{
       --bg:#040507;
@@ -97,6 +98,28 @@
     @media (max-width:880px){
       .hero-inner{flex-direction:column;align-items:flex-start;padding:28px}
     }
+
+    /* 2026 portfolio refresh */
+    :root{--bg:#07101a;--panel:#0d1926;--muted:#9eafbf;--neon:#62e5d1;--accent:#62e5d1;--glass:rgba(13,25,38,.82)}
+    body{background:#07101a;color:#eaf1f7;line-height:1.55}
+    .container{max-width:1160px;padding:0 24px}
+    .hero{min-height:auto;margin:32px 0 0;border:1px solid rgba(183,213,236,.15);border-radius:0;background:linear-gradient(135deg,#0b1b28,#07101a 72%);box-shadow:none}
+    .hero::before{content:"";position:absolute;inset:0;opacity:.3;background-image:linear-gradient(rgba(183,213,236,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(183,213,236,.16) 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(to bottom,#000,transparent 90%)}
+    #gridCanvas,#overlayCanvas,#bgOverlay{display:none}
+    .hero-inner{width:100%;padding:clamp(36px,7vw,88px);display:block}
+    .left{max-width:none}
+    h1{max-width:800px;font-size:clamp(3rem,8vw,6.4rem);letter-spacing:-.065em;line-height:.9;text-transform:none}
+    .title-bits{margin-top:20px}.chip{border-radius:3px;background:rgba(98,229,209,.08);border-color:rgba(98,229,209,.3);color:var(--neon);font-family:ui-monospace,Consolas,monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+    .summary{max-width:700px;margin-top:28px;padding:0;background:none;border:0;color:#c7d4df;font-size:clamp(1rem,2vw,1.2rem)}
+    .expertise{display:grid;grid-template-columns:repeat(3,1fr);margin:60px 0;border-top:1px solid rgba(183,213,236,.18);border-left:1px solid rgba(183,213,236,.18)}
+    .expertise article{min-height:180px;padding:24px;border-right:1px solid rgba(183,213,236,.18);border-bottom:1px solid rgba(183,213,236,.18)}
+    .expertise span{color:var(--neon);font:700 12px ui-monospace,Consolas,monospace}.expertise h2{margin:28px 0 7px;font-size:17px}.expertise p{margin:0;color:var(--muted);font-size:14px}
+    .cves{max-width:none;margin:0;padding:0;background:none;border:0;border-radius:0}.cves h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.04em}.cves h2::before{content:"Selected disclosures / ";color:var(--neon);font:700 12px ui-monospace,Consolas,monospace;letter-spacing:.08em;text-transform:uppercase}
+    .cves ul{display:block;border-top:1px solid rgba(183,213,236,.18)}.cves li{padding:18px 0;border:0;border-bottom:1px solid rgba(183,213,236,.18);border-radius:0;background:none}.cves li:hover{padding-left:12px;transform:none;background:rgba(98,229,209,.05);border-color:rgba(183,213,236,.18)}.cves a{color:var(--neon);font-family:ui-monospace,Consolas,monospace}
+    .cta-row{margin-top:60px}.btn{border-radius:3px;border-color:var(--neon)}.btn-primary{background:var(--neon);color:#07101a}
+    footer{padding:30px 0;text-align:left;font-family:ui-monospace,Consolas,monospace}
+    @media (max-width:700px){.container{padding:0 16px}.hero{margin-top:16px}.expertise{grid-template-columns:1fr}.cves h2::before{display:block;margin-bottom:10px}.cves li{font-size:13px}}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
   </style>
 </head>
 <body>
@@ -107,15 +130,24 @@
       <canvas id="bgOverlay" aria-hidden="true"></canvas>
       <div class="hero-inner">
         <div class="left">
-          <h1 id="hero-title">Humza Ahmad</h1>
+          <h1 id="hero-title">Humza Ahmad.<br>OT security researcher.</h1>
           <div class="title-bits">
             <div class="chip">OT Pentester</div>
             <div class="chip">Smart Grid</div>
             <div class="chip">Critical Infrastructure</div>
           </div>
           <div class="summary">
-            Cybersecurity specialist with expertise in penetration testing and security audits of OT systems. Skilled in component testing of smart meters, RTUs, IEDs, EV chargers, and solar inverters. Proficient in protocol testing & fuzzing (DLMS, MBus, IEC 104, IEC 61850 MMS, Goose, OCPP), web application & API testing, reverse engineering & source code review.
+            I investigate the security of connected infrastructure — from smart-grid components and industrial protocols to the cloud platforms that manage them.
           </div>
+
+          <section class="expertise" aria-label="Practice areas">
+            <article><span>01</span><h2>OT penetration testing</h2><p>Security assessment of industrial systems and their networked components.</p></article>
+            <article><span>02</span><h2>Smart-grid testing</h2><p>Testing smart meters, RTUs, IEDs, EV chargers, and solar inverters.</p></article>
+            <article><span>03</span><h2>Protocol research</h2><p>Fuzzing and testing DLMS, M-Bus, IEC 104, IEC 61850, GOOSE, and OCPP.</p></article>
+            <article><span>04</span><h2>Application security</h2><p>Web application and API testing for energy and OT platforms.</p></article>
+            <article><span>05</span><h2>Product assurance</h2><p>Source code review and reverse engineering beyond the interface.</p></article>
+            <article><span>06</span><h2>Responsible disclosure</h2><p>Working with vendors to make critical systems more resilient.</p></article>
+          </section>
 
           <!-- Public CVEs Section -->
           <section class="cves" aria-labelledby="cves-title">
@@ -207,6 +239,7 @@
       }
     }
     function draw(){
+      if (!canvas.offsetParent) return;
       ctx.fillStyle='rgba(4,5,7,0.2)';
       ctx.fillRect(0,0,w,h);
       particles.forEach(p=>{
